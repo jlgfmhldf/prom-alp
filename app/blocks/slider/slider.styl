@@ -1,0 +1,136 @@
+.slider
+	height 700px
+
+	&__logo
+		display inline-block
+		position absolute
+		top 49px
+		left 0
+
+	&__header-wrapper
+		padding-top 75px
+		height 105px
+		position absolute
+		z-index 10
+		min-width 1055px
+
+	&__header
+		display inline-block
+		padding-left 150px
+
+	&__pagination
+		position absolute
+		right -241px
+		top 0
+		z-index 10
+		font-size 0
+
+		&-btn
+			sprite($pagination-btn)
+			display inline-block
+			margin-right 55px
+			cursor pointer
+
+
+			&_next
+				sprite($pagination-btn-next)
+
+		&-wrapper
+			width 1150px
+			margin auto
+			position absolute
+			top 223px
+
+	&__wrapper
+		position relative
+
+.slide
+	position relative
+	height 700px
+	width 100%
+
+	&:before
+		content ''
+		position absolute
+		left 0
+		right 0
+		top 0
+		display block
+		height 700px
+		background-color rgba(0, 0, 255, 0.5)
+
+	&__bg
+		width 100%
+		position absolute
+		z-index -1
+		min-height 700px
+		min-width 1055px
+
+			+mobile()
+				display block
+
+		&_mobile
+			display none
+
+			+mobile()
+				display block
+
+	&__title
+		color white
+		font-family $din
+		font-size 36px
+		font-weight 700
+		margin-bottom 98px
+
+		+mobile()
+			font-size 30px
+			margin-bottom 67px
+
+	&__phone
+		position absolute
+		bottom 50px
+		left 0
+		font-style 0
+
+		&-item
+			color white
+			font-family $din
+			font-size 18px
+			font-weight 700
+			text-transform uppercase
+			margin-right 48px
+			display inline-block
+
+	&__facts
+		padding-left 58px
+		min-height 40px
+		background-image url(../images/video.png)
+		background-repeat no-repeat
+		color #fff
+		font-family $Helvetica
+		font-size 13px
+		font-weight 400
+		display table
+
+		&-text
+			display table-cell
+			vertical-align middle
+
+		+mobile()
+			font-size 18px
+
+	&__content
+		position relative
+		z-index 1
+		top 223px
+		height 477px
+		padding-left 147px
+
+		&:before
+			content ''
+			display block
+			size 70px 3px
+			background #fff
+			position absolute
+			left 0
+			top 1px

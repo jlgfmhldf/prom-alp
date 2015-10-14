@@ -1,0 +1,37 @@
+mixin slide(data, counter)
+
+	.slide.swiper-slide
+		img.slide__bg(src='assets/images/slide-image-'+counter+'.jpg')
+		img.slide__bg.slide__bg_mobile(src='assets/images/slide-image-'+1+'-mobile.jpg')
+		.slide__content.wrapper
+			.slide__title!=data.title
+
+			.slide__facts
+				.slide__facts-text!=data.facts
+
+			.slide__phone
+				.slide__phone-item 8 (432) 25 69 000
+				.slide__phone-item 8 (920) 212 47 98
+
+
+
+mixin slider(data)
+	.slider
+		.wrapper
+			block
+
+		.swiper-container
+			.swiper-wrapper
+				- counter = 1
+				each sliderInfo in data
+
+					+slide(sliderInfo, counter)
+					- counter++
+
+
+
+		.slider__pagination-wrapper.wrapper
+			.slider__pagination
+				.slider__pagination-btn.slider__pagination-btn_prev
+				.slider__pagination-btn.slider__pagination-btn_next
+

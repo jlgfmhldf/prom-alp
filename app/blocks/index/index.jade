@@ -1,0 +1,27 @@
+include ../content/content
+include ../container/container
+include ../subtitle/subtitle
+include ../list/list
+include ../header/header
+include ../slider/slider
+include ../menu/menu
+
+
+mixin index()
+	.index
+		.section
+			+slider([{
+						title: 'Вы заинтересованы в выборе <br /> надежного и ответственного <br /> подрядчика?',
+						facts: 'Несколько фактов почему ваш поиск должен <br /> закончиться после знакомства с нашей организацией.'
+					},
+					{
+						title: 'Вы заинтересованы в выборе <br /> надежного и ответственного <br /> подрядчика?',
+						facts: 'Несколько фактов почему ваш поиск должен <br /> закончиться после знакомства с нашей организацией.'
+					},
+					{
+						title: 'Вы заинтересованы в выборе <br /> надежного и ответственного <br /> подрядчика?',
+						facts: 'Несколько фактов почему ваш поиск должен <br /> закончиться после знакомства с нашей организацией.'
+					}])
+				.slider__header-wrapper
+					+logo().slider__logo
+					+menu().menu_type_header.slider__header
