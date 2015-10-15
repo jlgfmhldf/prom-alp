@@ -1,0 +1,106 @@
+.slide
+    position relative
+    height 700px
+    width 100%
+
+    &:before
+        content ''
+        position absolute
+        left 0
+        right 0
+        top 0
+        display block
+        height 700px
+        background-color rgba(0, 0, 255, 0.5)
+
+    &__bg
+        position absolute
+        z-index -1
+        min-height 700px
+        min-width 1055px
+        width 100%
+
+        +mobile()
+            display block
+
+        &_mobile
+            display none
+            min-width 400px
+
+            +mobile()
+                display block
+
+    &__title
+        color white
+        font-family $din
+        font-size 36px
+        font-weight 700
+        margin-bottom 98px
+
+        +mobile()
+            font-size 30px
+            margin-bottom 67px
+
+    &__phone
+        position absolute
+        bottom 50px
+        left 0
+        font-style 0
+
+        +mobile()
+            display none
+
+        &-item
+            color white
+            font-family $din
+            font-size 18px
+            font-weight 700
+            text-transform uppercase
+            margin-right 48px
+            display inline-block
+
+    &__facts
+        padding-left 58px
+        min-height 40px
+        background-image url(../images/video.png)
+        background-repeat no-repeat
+        color #fff
+        font-family $Helvetica
+        font-size 13px
+        font-weight 400
+        display table
+
+        &-text
+            display table-cell
+            vertical-align middle
+
+        +mobile()
+            font-size 18px
+
+    &__content
+        position relative
+        z-index 1
+        top 223px
+        height 477px
+        padding-left 147px
+
+        &:before
+            content ''
+            display block
+            size 70px 3px
+            background #fff
+            position absolute
+            left 0
+            top 1px
+
+            +mobile()
+                left 5px;
+                top -51px
+
+
+        +mobile()
+            padding-left 7px
+            top 241px
+
+            br
+                display none
