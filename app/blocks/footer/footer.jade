@@ -3,6 +3,9 @@ include ../dark/dark
 
 mixin footer()
 	.footer
-		+dark()
-			.footer__copyright
-				| ©felixexter, 2013&mdash;2015
+		+logo().footer__logo
+		+menu().menu_type_footer
+		.footer__description
+			.footer__description-title ПРОМ АЛЬП 36
+
+			.footer__description-text Компания ИЗОЛЯЦИОННЫЕ ТЕХНОЛОГИИ оказывает услуги комплексному решению вопросов в&nbsp;сфере изоляции на&nbsp;территории Воронежа, ЦФО, ЮФО.

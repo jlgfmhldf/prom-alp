@@ -8,15 +8,14 @@ include ../menu/menu
 
 
 mixin index()
-	.index
-		.section
-			+slider([{
-						title: 'Вы&nbsp;заинтересованы в&nbsp;выборе <br />	 надежного и&nbsp;ответственного <br/>	 подрядчика?&rsquo;',
-						facts: 'Несколько фактов почему ваш поиск должен <br/> закончиться после знакомства с&nbsp;нашей организацией.'
-					}])
-				.slider__mobile-menu
-					.slider__header-black
-					.slider__header-wrapper
-						+logo().slider__logo
-						+menu().menu_type_header.slider__header
-						+menuBtn.menuBtn().slider__header-menu-btn
+	.section
+		+slider([{
+					title: 'Вы&nbsp;заинтересованы в&nbsp;выборе <br />	 надежного и&nbsp;ответственного <br/>	 подрядчика?&rsquo;',
+					facts: 'Несколько фактов почему ваш поиск должен <br/> закончиться после знакомства с&nbsp;нашей организацией.'
+				}])
+			.slider__mobile-menu
+				.slider__header-black
+				.slider__header-wrapper
+					+logo().slider__logo
+					+menu().menu_type_header.slider__header
+					+menuBtn.menuBtn().slider__header-menu-btn
