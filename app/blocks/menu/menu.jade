@@ -3,3 +3,6 @@ mixin menu()
 
 		each val in ['о компании', 'гидроизоляция', 'гидрофобизация', 'герметизация', 'новости', 'Контакты']
 			a.menu__item(href=jv0)=val
+
+mixin menuBtn()
+	.menu__mobile-btn&attributes(attributes)

@@ -6,7 +6,6 @@
 		margin-right 65px
 		text-transform uppercase
 		color #fff
-		color white
 		font-family $Helvetica
 		font-size 13px
 		font-weight 700
@@ -35,3 +34,25 @@
 
 		&__item
 			display block
+
+		&__mobile-btn
+			width 55px
+			height 8px
+			background #ffffff
+			position relative
+			right 0
+
+			&:before
+			&:after
+				content ''
+				display: block
+				width 55px
+				height 8px
+				background #ffffff
+				position absolute
+
+			&:before
+				top -18px
+
+			&:after
+				bottom -18px
