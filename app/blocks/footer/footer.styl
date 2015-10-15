@@ -1,6 +1,51 @@
 .footer
-	padding-top 30px
-	border-radius 0 0 4px 4px
+	background-color #3f3f43
+	height 300px
+	padding-top 50px
+	font-size 0
+	position relative
 
-	&__copyright
-		padding 20px
+	+mobile()
+		height 330px
+
+	&__wrapper
+		position relative
+
+	&__description
+		color #fff
+		width 335px
+		display inline-block
+		margin-left 143px
+		vertical-align top
+
+		&-title
+			font-family $din-500
+			font-size 24px
+			margin-bottom 15px
+
+		&-text
+			font-family $helvetica-400
+			font-size 13px
+			line-height 21px
+
+		+mobile()
+			margin-left 0
+			margin-top 45px
+
+			&-text
+				line-height 24px
+
+	&__mobile-menu-btn
+		display none
+
+		+mobile()
+
+			display block
+			position absolute !important
+			right 0
+			top 0
+			top 34px
+			right 14px !important
+
+			
+			

@@ -4,6 +4,9 @@ include ../main/main
 include ../footer/footer
 include ../scripts/scripts
 
+- footerMenuData = ['о компании', 'герметизация', 'гидроизоляция', 'новости', 'гидрофобизация', 'Контакты']
+
+
 +script([], ['app.min.js'])
 
 doctype html
@@ -13,6 +16,6 @@ html(lang='ru')
 		+main()
 			block content
 
-			+footer()
+			+footer(footerMenuData)
 
 		+scripts()

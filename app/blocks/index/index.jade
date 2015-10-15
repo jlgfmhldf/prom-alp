@@ -8,6 +8,9 @@ include ../menu/menu
 
 
 mixin index()
+
+	- headerMenuData = ['о компании', 'гидроизоляция', 'гидрофобизация', 'герметизация', 'новости', 'Контакты']
+
 	.section
 		+slider([{
 					title: 'Вы&nbsp;заинтересованы в&nbsp;выборе <br />	 надежного и&nbsp;ответственного <br/>	 подрядчика?&rsquo;',
@@ -17,5 +20,5 @@ mixin index()
 				.slider__header-black
 				.slider__header-wrapper
 					+logo().slider__logo
-					+menu().menu_type_header.slider__header
-					+menuBtn.menuBtn().slider__header-menu-btn
+					+menu(headerMenuData).menu_type_header.slider__header
+					+menuBtn().slider__header-menu-btn

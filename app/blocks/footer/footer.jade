@@ -1,11 +1,13 @@
 include ../fork/fork
 include ../dark/dark
 
-mixin footer()
+mixin footer(data)
 	.footer
-		+logo().footer__logo
-		+menu().menu_type_footer
-		.footer__description
-			.footer__description-title ПРОМ АЛЬП 36
+		.wrapper.footer__wrapper
+			+logo().footer__logo
+			+menu(data).menu_type_footer
+			.footer__description
+				.footer__description-title ПРОМ АЛЬП 36
 
-			.footer__description-text Компания ИЗОЛЯЦИОННЫЕ ТЕХНОЛОГИИ оказывает услуги комплексному решению вопросов в&nbsp;сфере изоляции на&nbsp;территории Воронежа, ЦФО, ЮФО.
+				.footer__description-text Компания ИЗОЛЯЦИОННЫЕ ТЕХНОЛОГИИ оказывает услуги комплексному решению вопросов в&nbsp;сфере изоляции на&nbsp;территории Воронежа, ЦФО, ЮФО.
+			+menuBtn().footer__mobile-menu-btn

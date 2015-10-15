@@ -40,11 +40,12 @@
 			background #ffffff
 			position relative
 			right 0
+			cursor pointer
 
 			&:before
 			&:after
 				content ''
-				display: block
+				display block
 				width 55px
 				height 8px
 				background #ffffff
@@ -55,3 +56,20 @@
 
 			&:after
 				bottom -18px
+
+	&_type_footer
+		width 486px
+		display inline-block
+		margin-left 80px
+
+		+mobile()
+			display none
+
+	&_type_footer &__item
+		width 50%
+		margin-right 0
+		margin-bottom 14px
+		line-height 16px
+
+
+
