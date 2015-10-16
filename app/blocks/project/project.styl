@@ -1,0 +1,87 @@
+.project
+	width 300px
+	position relative
+	min-height 450px
+
+	+mobile()
+		width 398px
+
+	&__link
+		margin-top 53px
+		display inline-block
+
+	&__image
+		size 300px 197px
+
+		+mobile()
+			display none
+
+		&_type_mobile
+			display none
+
+			+mobile()
+				display block
+
+		&_state_active
+			width 350px
+			height 230px
+
+	&__date
+		position absolute
+		left -80px
+		top 3px
+
+		+mobile()
+			position static
+
+		&-wrapper
+			position relative
+			display none
+
+			+mobile()
+				display block
+
+	&__descr
+		max-height 0
+		overflow hidden
+		transition-duration 1s
+
+		+mobile()
+			height 500px
+			transition-duration 0
+
+	&_state_active &
+		&__descr
+			max-height 1000px
+
+			&-title
+				margin-top 30px
+
+			&-text
+				margin-top 24px
+
+		&__name
+			font-family $din-700
+			font-size 36px
+
+		&__image
+			size 350px 230px
+
+	+mobile()
+		&_state_active &
+			&__descr
+				max-height 1000px
+
+				&-title
+					margin-top 30px
+
+				&-text
+					margin-top 24px
+
+			&__name
+				font-family $din-700
+				font-size 36px
+
+			&__image
+				size 350px 230px
+

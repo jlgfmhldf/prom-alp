@@ -1,0 +1,53 @@
+.projects
+	padding-top 9px
+
+	+mobile()
+		text-align center
+
+	&__title
+		margin-bottom 34px
+		text-align left
+
+	&__item-wrapper
+		width 460px
+		text-align center
+		display inline-block
+
+		+mobile()
+			width 398px
+
+	&__item
+		display inline-block
+		text-align left
+		vertical-align top
+
+	&__container
+		position relative
+
+	&__pagination
+		position absolute
+		top 0
+		left 0
+		width 512px
+		height 0
+
+		&-wrapper
+			position absolute
+			top 0
+			right 0
+			left 0
+			margin 0 auto
+
+		&-btn
+			position absolute
+			top 0
+			sprite($projects-pagination-btn)
+
+			&_prev
+				left 0
+
+			&_next
+				right 0
+				transform rotate(180deg)
+
+

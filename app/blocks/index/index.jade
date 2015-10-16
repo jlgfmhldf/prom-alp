@@ -1,6 +1,10 @@
 include ../header/header
 include ../slider/slider
 include ../menu/menu
+include ../project/project
+include ../projects/projects
+include ../text/text
+include ../title/title
 
 
 mixin index()
@@ -18,6 +22,51 @@ mixin index()
 					+logo().slider__logo
 					+menu(headerMenuData).menu_type_header.slider__header
 					+menuBtn().slider__header-menu-btn
+
+		+projects([
+			{
+				date: 2014,
+				imgName: 'project-img-1',
+				name: 'Сбербанк',
+				descrTitle: 'Пролонгация договора на&nbsp;выполнение высотных работ',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			},
+			{
+				date: 2014,
+				imgName: 'project-img-2',
+				name: 'BUNGE',
+				descrTitle: 'Пролонгация договора на&nbsp;выполнение высотных работ',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			},
+			{
+				date: 2014,
+				imgName: 'project-img-2',
+				name: 'PEPSICO',
+				descrTitle: 'Монтажные работы',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			},
+			{
+				date: 2014,
+				imgName: 'project-img-1',
+				name: 'Сбербанк',
+				descrTitle: 'Пролонгация договора на&nbsp;выполнение высотных работ',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			},
+			{
+				date: 2015,
+				imgName: 'project-img-2',
+				name: 'Сбербанк',
+				descrTitle: 'Пролонгация договора на&nbsp;выполнение высотных работ',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			},
+			{
+				date: 2015,
+				imgName: 'project-img-1',
+				name: 'Сбербанк',
+				descrTitle: 'Пролонгация договора на&nbsp;выполнение высотных работ',
+				description: 'Повседневная практика показывает, что укрепление и&nbsp;развитие структуры позволяет оценить значение систем массового участия.'
+			}
+		])
 
 		.title Заголовок
 		.title.title_type_uppercase Заголовок

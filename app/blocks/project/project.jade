@@ -1,0 +1,17 @@
+include ../title/title
+include ../title/title
+include ../link/link
+
+mixin project(data)
+    .project&attributes(attributes)
+        img.project__image(src='assets/images/'+data.imgName+'.jpg')
+        img.project__image_type_mobile(src='assets/images/project-img-1-mobile.jpg')
+        .project__date-wrapper.js-project-hidden
+            +title(data.date).title_size_small.project__date
+        +title(data.name).project__name.title_size_small
+        .project__descr.js-project-hidden
+            +text(data.descrTitle).text_size_small.project__descr-title
+            +text(data.description).project__descr-text
+            +link('Подробнее о проекте').project__link
+
+

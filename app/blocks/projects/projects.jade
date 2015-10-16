@@ -1,0 +1,18 @@
+inclide ../project/project
+
+mixin projects(data)
+    .projects
+        .wrapper.wrapper_size_small
+            +title('Проекты').projects__title.title_type_uppercase
+        .projects__container
+            .project__slider
+
+                each val in data
+                    .projects__item-wrapper
+                        +project(val).projects__item
+
+            .wrapper.projects__pagination-wrapper
+
+                .projects__pagination
+                        .projects__pagination-btn.projects__pagination-btn_prev
+                        .projects__pagination-btn.projects__pagination-btn_next
