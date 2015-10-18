@@ -65,12 +65,6 @@ $(() => {
         slidesToShow: 3,
         centerPadding: '1.6%',
         responsive:[
-            //{
-            //    breakpoint: 1440,
-            //    settings: {
-            //        slidesToShow: 3,
-            //    }
-            //},
             {
                 breakpoint: 640,
                 settings: {
@@ -81,18 +75,4 @@ $(() => {
         ]
 
     });
-
-
-
-
-    //
-    //$projectsSlider.slick('setPosition', 140);
-
-
-    //$projectsSlider.on('setPosition', function(event, slick, direction, setPosition){
-    //    console.log(slick);
-    //
-    //    //alignSlider();
-    //    // left
-    //});
 });
