@@ -1,0 +1,26 @@
+.text-block
+	font-size 0
+	padding-bottom 80px
+
+	&__col
+		display inline-block
+		vertical-align top
+		width 48%
+
+	&_type_company &
+
+		&__col
+
+			&:first-of-type
+				margin-right 200px
+				width 354px
+
+				+mobile()
+					width 100%
+					margin-right 0
+
+			&:nth-of-type(2)
+				width 350px
+
+				+mobile()
+					width 100%

@@ -1,0 +1,12 @@
+mixin text-block-item(data)
+    .text-block-item
+        if data.title
+            +title(data.title).text-block-item__title.title_type_uppercase.title_type_subtitle
+        if data.text
+            +text(data.text).text-block-item__text
+        if data.image
+            .text-block-item__container
+                img.text-block-item__img(src='assets/images/'+data.image class=data.imageClass?'text-block-item__img_'+data.imageClass:'')
+
+                if data.image2
+                    img.text-block-item__img(src='assets/images/'+data.image2 class=data.imageClass2?'text-block-item__img_'+data.imageClass2:'')

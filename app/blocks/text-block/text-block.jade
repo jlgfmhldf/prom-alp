@@ -1,0 +1,18 @@
+include ../text-block-item/text-block-item
+
+mixin text-block(data)
+    .text-block(class=data.type?'text-block_type_'+data.type:'')
+        .wrapper.wrapper_size_small
+            +title(data.title).title_type_uppercase
+
+            .text-block__container
+
+                block
+
+mixin text-block-col(data)
+    .text-block__col
+        each val in data.items
+            +text-block-item(val)
+
+
+
