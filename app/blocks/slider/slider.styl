@@ -1,6 +1,7 @@
 .slider
-	height 700px
 	position relative
+	overflow hidden
+	height 700px
 
 	&__logo
 		display inline-block
@@ -43,7 +44,7 @@
 
 				&__header
 					display block
-			
+
 	&__header
 		display inline-block
 		padding-left 150px
@@ -80,6 +81,7 @@
 
 			+mobile()
 				position static
+				width 400px
 
 		+mobile()
 			bottom 51px

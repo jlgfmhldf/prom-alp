@@ -14,7 +14,7 @@
 		display inline-block
 
 		+mobile()
-			width 398px
+			width 100%
 
 	&__item
 		display inline-block
@@ -31,16 +31,30 @@
 		width 512px
 		height 0
 
+		+mobile()
+			font-size 0
+			width 130px
+			height 55px
+			right 0
+			left initial
+
 		&-wrapper
 			position absolute
 			top 0
 			right 0
 			left 0
 			margin 0 auto
+			width 1100px
+
+			+mobile()
+				width 400px
+				top initial
+				bottom 55px
 
 		&-btn
 			position absolute
 			top 0
+			cursor pointer
 			sprite($projects-pagination-btn)
 
 			&_prev
@@ -49,5 +63,10 @@
 			&_next
 				right 0
 				transform rotate(180deg)
+
+			+mobile()
+				width 29px
+				height 55px
+
 
 

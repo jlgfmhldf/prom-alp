@@ -1,6 +1,6 @@
 mixin slide(data, counter)
 
-	.slide.swiper-slide
+	.slide
 		img.slide__bg(src='assets/images/slide-image-'+counter+'.jpg')
 		img.slide__bg.slide__bg_mobile(src='assets/images/slide-image-'+1+'-mobile.jpg')
 		.slide__content.wrapper
@@ -20,18 +20,17 @@ mixin slider(data)
 		.wrapper
 			block
 
-		.swiper-container.js-slider
-			.swiper-wrapper
-				- counter = 1
-				each sliderInfo in data
+		.js-slider
+			- counter = 1
+			each sliderInfo in data
 
-					+slide(sliderInfo, counter)
-					- counter++
+				+slide(sliderInfo, counter)
+				- counter++
 
 
 
 		.slider__pagination-wrapper.wrapper
 			.slider__pagination
-				.slider__pagination-btn.slider__pagination-btn_prev
-				.slider__pagination-btn.slider__pagination-btn_next
+				.slider__pagination-btn.slider__pagination-btn_prev.js-slider-prev
+				.slider__pagination-btn.slider__pagination-btn_next.js-slider-next
 

@@ -3,24 +3,29 @@
 	position relative
 	min-height 450px
 
+	&__slider
+		overflow hidden
+
 	+mobile()
 		width 398px
 
 	&__link
 		margin-top 53px
 		display inline-block
+		display none
 
 	&__image
 		size 300px 197px
+		transition-duration .5s
 
 		+mobile()
-			display none
+			display none !important
 
 		&_type_mobile
-			display none
+			display none !important
 
 			+mobile()
-				display block
+				display block !important
 
 		&_state_active
 			width 350px
@@ -42,23 +47,24 @@
 				display block
 
 	&__descr
-		max-height 0
-		overflow hidden
-		transition-duration 1s
 
-		+mobile()
-			height 500px
-			transition-duration 0
+		&-title
+			margin-top 30px
 
-	&_state_active &
+		&-text
+			margin-top 24px
+			display none
+
+
+	.slick-center &
+
 		&__descr
-			max-height 1000px
 
 			&-title
 				margin-top 30px
 
 			&-text
-				margin-top 24px
+				display block
 
 		&__name
 			font-family $din-700
@@ -67,21 +73,25 @@
 		&__image
 			size 350px 230px
 
+		&__link
+			display block
+
 	+mobile()
-		&_state_active &
-			&__descr
-				max-height 1000px
+		&__descr
 
-				&-title
-					margin-top 30px
+			&-title
+				margin-top 30px
 
-				&-text
-					margin-top 24px
+			&-text
+				display block
 
-			&__name
-				font-family $din-700
-				font-size 36px
+		&__name
+			font-family $din-700
+			font-size 36px
 
-			&__image
-				size 350px 230px
+		&__image
+			size 350px 230px
+
+		&__link
+			display block
 
