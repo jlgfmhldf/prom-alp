@@ -1,5 +1,7 @@
 mixin text-block-item(data)
     .text-block-item
+        if data.date
+            +text(data.date).text_size_small.text-block-item__date
         if data.title
             +title(data.title).text-block-item__title.title_type_uppercase.title_type_subtitle
         if data.text
