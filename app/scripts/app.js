@@ -8,18 +8,17 @@ $(() => {
 	// Code here
 
     var $projectsSlider = $('.js-projects-slider'),
-        $projectTitle = $('.js-project-title'),
         windowWith = $(window).width(),
-        isMobile = windowWith >= 640,
+        isDestkop = windowWith >= 640,
         alignSlider, resizeId;
 
     console.log(windowWith)
 
-    if (isMobile) {
+    if (isDestkop) {
         alignSlider = function () {
             var $projectTitle = $('.js-project-title'),
                 projectTitleOffsetLeft = $projectTitle.offset().left,
-                activeLeft = $('.slick-center').find('.js-project-slider-item').offset().left,
+                activeLeft = $('.slick-current').find('.js-project-slider-item').offset().left,
                 val;
 
             val = projectTitleOffsetLeft - activeLeft;
@@ -37,8 +36,12 @@ $(() => {
         });
 
         $(window).on('resize', function () {
-            clearTimeout(resizeId);
-            resizeId = setTimeout(alignSlider, 500);
+            var windowWithNow = $(window).width();
+            if (windowWith != windowWithNow) {
+                clearTimeout(resizeId);
+                resizeId = setTimeout(alignSlider, 1000);
+            }
+
         })
 
     }

@@ -58,9 +58,15 @@
 			display none
 
 
-	.slick-center &
+	.slick-current &
 		cursor default
 		width 350px
+
+		+below(1200px)
+			width 300px
+
+		+mobile()
+			width 398px
 
 		&__descr
 
@@ -76,6 +82,10 @@
 
 		&__image
 			size 350px 230px
+
+			+below(1200px)
+				size 300px 197px
+
 
 		&__link
 			display block

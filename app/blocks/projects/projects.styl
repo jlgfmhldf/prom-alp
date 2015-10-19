@@ -28,9 +28,17 @@
 	&__pagination
 		position absolute
 		top 0
-		left 0
-		width 512px
 		height 0
+		left 22px
+		width 512px
+
+		+below(1440px)
+			left 48px
+			width 452px
+
+		+below(1200px)
+			left 54px
+			width 392px
 
 		+mobile()
 			font-size 0

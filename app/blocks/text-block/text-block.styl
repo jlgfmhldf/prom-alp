@@ -4,10 +4,16 @@
 	padding-top 28px
 	white-space nowrap
 
+	+mobile()
+		white-space normal
+
 	&__col
 		display inline-block
 		vertical-align top
 		width 48%
+
+		+mobile()
+			width 100%
 
 	&_type_company &
 
@@ -27,13 +33,38 @@
 				+mobile()
 					width 100%
 
-	&_type_news
+		&__col:first-of-type
+
+			.text-block-item__title
+				position relative
+
+				+mobile()
+					margin-top 105px
+
+				&:before
+					content ''
+					position absolute
+					top 4px
+					left -77px
+					display block
+					size 50px 5px
+					background-color #efefed
+
+					+mobile()
+						left 0
+						top -55px
+
+
+&_type_news
 		padding-bottom 109px
 
 	&_type_news &
 
 		&__col:first-of-type
 			width 58%
+
+			+mobile()
+				width 100%
 
 
 
