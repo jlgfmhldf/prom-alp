@@ -10,6 +10,10 @@ body
 		padding-bottom 0
 		min-width 500px
 
+	&.blocked
+		overflow hidden
+		height 100%
+
 .wrapper
 	width 1150px
 	margin 0 auto
@@ -17,5 +21,9 @@ body
 	&_size_small
 		width 900px
 
+
 	+mobile()
+		width 640px
+
+	+below(640px)
 		width 400px

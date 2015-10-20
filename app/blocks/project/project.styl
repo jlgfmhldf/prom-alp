@@ -8,7 +8,10 @@
 		overflow hidden
 
 	+mobile()
-		width 398px
+		width 640px
+
+	+below(640px)
+		width 400px
 
 	&__link
 		margin-top 53px
@@ -27,6 +30,8 @@
 
 			+mobile()
 				display block !important
+				width 100%
+				height initial
 
 		&_state_active
 			width 350px
@@ -66,7 +71,10 @@
 			width 300px
 
 		+mobile()
-			width 398px
+			width 640px
+
+		+below(640px)
+			width 400px
 
 		&__descr
 

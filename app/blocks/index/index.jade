@@ -24,9 +24,10 @@ mixin index()
 				title: 'Вы&nbsp;заинтересованы в&nbsp;выборе <br />	 надежного и&nbsp;ответственного <br/>	 подрядчика?',
 				facts: 'Несколько фактов почему ваш поиск должен <br/> закончиться после знакомства с&nbsp;нашей организацией.'
 			}])
-		.slider__mobile-menu
+		.slider__mobile-menu.js-mobile-menu
+			.slider__header-close-menu.js-close-menu
 			.slider__header-black
-			.slider__header-wrapper
+			.slider__header-wrapper.wrapper
 				+logo().slider__logo
 				+menu(headerMenuData).menu_type_header.slider__header
 				+menuBtn().slider__header-menu-btn

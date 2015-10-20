@@ -8,11 +8,41 @@ $(() => {
 	// Code here
 
     var $projectsSlider = $('.js-projects-slider'),
+        $menuBtn = $('.js-menu-btn'),
+        $menuClose = $('.js-close-menu'),
+        $sliderMenu = $('.js-mobile-menu'),
+        $body = $('body'),
+        sliderMenuActive = 'slider__mobile-menu_show',
         windowWith = $(window).width(),
-        isDestkop = windowWith >= 640,
+        isDestkop = windowWith >= 1150,
         alignSlider, resizeId;
 
-    console.log(windowWith)
+
+    function mobileMenu() {
+        this.show = function () {
+            $sliderMenu.addClass(sliderMenuActive);
+            $menuBtn.hide();
+            $body.addClass('blocked');
+        };
+
+        this.hide = function () {
+            $sliderMenu.removeClass(sliderMenuActive);
+            $menuBtn.show();
+            $body.removeClass('blocked');
+        }
+    }
+
+    var menu = new mobileMenu();
+
+    $menuBtn.on('click', function () {
+        menu.show();
+    });
+
+    $menuClose.on('click', function () {
+        $sliderMenu.removeClass(sliderMenuActive);
+        $menuBtn.show();
+        $body.removeClass('blocked');
+    });
 
     if (isDestkop) {
         alignSlider = function () {
@@ -42,7 +72,7 @@ $(() => {
                 resizeId = setTimeout(alignSlider, 1000);
             }
 
-        })
+        });
 
     }
 
@@ -69,7 +99,7 @@ $(() => {
         centerPadding: '1.6%',
         responsive:[
             {
-                breakpoint: 640,
+                breakpoint: 1150,
                 settings: {
                     centerMode: false,
                     slidesToShow: 1,

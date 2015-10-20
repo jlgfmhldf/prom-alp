@@ -3,7 +3,7 @@
 
 	&__item
 		display inline-block
-		margin-right 65px
+		margin-right 61px
 		text-transform uppercase
 		color #fff
 		font-family $helvetica-700
@@ -39,7 +39,7 @@
 			height 8px
 			background #ffffff
 			position relative
-			right 0
+			top 18px
 			cursor pointer
 
 			&:before
@@ -56,11 +56,18 @@
 
 			&:after
 				bottom -18px
+				
+			&-wrapper
+				display block
+				width 55px
+				height 44px
+				position absolute
+				right 0
 
 	&_type_footer
 		width 486px
 		display inline-block
-		margin-left 60px
+		margin-left 80px
 
 		+mobile()
 			display none
