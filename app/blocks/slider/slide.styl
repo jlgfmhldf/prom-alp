@@ -1,107 +1,129 @@
 .slide
-    position relative
-    height 700px
-    width 100%
-    overflow hidden
+	position relative
+	height 700px
+	width 100%
+	overflow hidden
 
-    &:before
-        content ''
-        position absolute
-        left 0
-        right 0
-        top 0
-        display block
-        height 700px
-        background-color rgba(0, 0, 255, 0.5)
+	&:before
+		content ''
+		position absolute
+		left 0
+		right 0
+		top 0
+		display block
+		height 700px
+		background-color rgba(0, 0, 255, 0.5)
 
-    &__bg
-        position absolute
-        z-index -1
-        min-height 700px
-        min-width 1055px
-        width 100%
+	&__number
+		position absolute
+		right -33px
+		bottom 103px
+		transform rotate(-90deg)
+		font-family $helvetica-400
+		font-weight 300
+		font-size 36px
+		color #fff
 
-        +mobile()
-            display block
+		&-part
+			display inline-block
 
-        &_mobile
-            display none
-            min-width 400px
+		&-summ
+			position relative
+			left -10px
+			font-size 19px
+			display inline-block
 
-            +mobile()
-                display block
+		&-line
+			display inline-block
 
-    &__title
-        color white
-        font-family $din-700
-        font-size 36px
-        margin-bottom 98px
+	&__bg
+		position absolute
+		z-index -1
+		min-height 700px
+		min-width 1055px
+		width 100%
 
-        +mobile()
-            font-size 30px
-            margin-bottom 67px
+		+mobile()
+			display block
 
-    &__phone
-        position absolute
-        bottom 50px
-        left 130px
-        font-style 0
+		&_mobile
+			display none
+			min-width 400px
 
-        +mobile()
-            display none
+			+mobile()
+				display block
 
-        &-item
-            color white
-            font-family $din-700
-            font-size 18px
-            text-transform uppercase
-            margin-right 48px
-            display inline-block
+	&__title
+		color white
+		font-family $din-700
+		font-size 36px
+		margin-bottom 98px
 
-    &__facts
-        padding-left 58px
-        min-height 40px
-        background-image url(../images/video.png)
-        background-repeat no-repeat
-        color #fff
-        font-family $helvetica-400elvetica
-        font-size 13px
-        font-weight 400
-        display table
-        cursor pointer
-        text-decoration none
+		+mobile()
+			font-size 30px
+			margin-bottom 67px
 
-        &-text
-            display table-cell
-            vertical-align middle
+	&__phone
+		position absolute
+		bottom 50px
+		left 130px
+		font-style 0
 
-        +mobile()
-            font-size 18px
+		+mobile()
+			display none
 
-    &__content
-        position relative
-        z-index 1
-        top 223px
-        height 477px
-        padding-left 130px
+		&-item
+			color white
+			font-family $din-700
+			font-size 18px
+			text-transform uppercase
+			margin-right 48px
+			display inline-block
 
-        &:before
-            content ''
-            display block
-            size 70px 3px
-            background #fff
-            position absolute
-            left -21px
-            top 1px
+	&__facts
+		padding-left 58px
+		min-height 40px
+		background-image url(../images/video.png)
+		background-repeat no-repeat
+		color #fff
+		font-family $helvetica-400
+		font-size 13px
+		font-weight 400
+		display table
+		cursor pointer
+		text-decoration none
 
-            +mobile()
-                left 5px;
-                top -51px
+		&-text
+			display table-cell
+			vertical-align middle
+
+		+mobile()
+			font-size 18px
+
+	&__content
+		position relative
+		z-index 1
+		top 223px
+		height 477px
+		padding-left 130px
+
+		&:before
+			content ''
+			display block
+			size 70px 3px
+			background #fff
+			position absolute
+			left -21px
+			top 1px
+
+			+mobile()
+				left 5px;
+				top -51px
 
 
-        +mobile()
-            padding-left 7px
-            top 241px
+		+mobile()
+			padding-left 7px
+			top 241px
 
-            br
-                display none
+			br
+				display none

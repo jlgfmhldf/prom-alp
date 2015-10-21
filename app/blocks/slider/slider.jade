@@ -1,4 +1,4 @@
-mixin slide(data, counter)
+mixin slide(data, counter, length)
 
 	.slide
 		img.slide__bg(src='assets/images/slide-image-'+counter+'.jpg')
@@ -13,6 +13,11 @@ mixin slide(data, counter)
 				.slide__phone-item 8 (432) 25 69 000
 				.slide__phone-item 8 (920) 212 47 98
 
+			.slide__number
+				.slide__number-part='0' + counter
+				| /
+				.slide__number-summ='0' + length
+				.slide__number-summ _____
 
 
 mixin slider(data)
@@ -23,8 +28,9 @@ mixin slider(data)
 		.js-slider
 			- counter = 1
 			each sliderInfo in data
+				- length = data.length
 
-				+slide(sliderInfo, counter)
+				+slide(sliderInfo, counter, length)
 				- counter++
 
 
