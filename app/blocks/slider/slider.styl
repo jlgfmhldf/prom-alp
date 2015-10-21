@@ -22,17 +22,6 @@
 		+mobile()
 			padding-top 0
 
-	&__header-black
-		background #000000
-		position fixed
-		top 0
-		left 0
-		bottom 0
-		height 100%
-		width 83%
-		min-width 83%
-		z-index 10
-		visibility hidden
 
 	+mobile()
 
@@ -40,22 +29,32 @@
 
 			.slider
 
-				&__header-black
-					visibility visible
-					min-width 400px
-
 				&__header
-					display block
+					visibility visible
 
 				&__header-wrapper
+					z-index 1000
+					background #000000
 					position fixed
+					top 0
+					left 0
+					bottom 0
+					height 100%
+					width 83%
+					min-width 350px
+					z-index 100
+					padding-left 12%
+					padding-top 50px
 
 				&__header-close-menu
 					position fixed
-					z-index 10
+					z-index 100
 					top 0
 					bottom 0
 					width 100%
+
+				&__logo
+					position static
 
 
 	&__header
@@ -64,8 +63,8 @@
 
 		+mobile()
 			padding-left 6px
-			padding-top 177px
-			display none
+			padding-top 49px
+			visibility hidden
 
 	&__pagination
 		position absolute

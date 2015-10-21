@@ -19,38 +19,36 @@ $(() => {
 
 
     function mobileMenu() {
+        var wHeight = $(window).height();
+
         this.show = function () {
             $sliderMenu.addClass(sliderMenuActive);
             $menuBtn.hide();
-            $body.addClass('blocked');
+            $body.addClass('blocked')
+                .css('height', wHeight + 'px');
         };
 
         this.hide = function () {
             $sliderMenu.removeClass(sliderMenuActive);
             $menuBtn.show();
-            $body.removeClass('blocked');
+            $body.removeClass('blocked')
+                .css('height', '');
         }
     }
 
     var menu = new mobileMenu();
 
-    $menuBtn.on('click', function () {
-        menu.show();
-    });
+    $menuBtn.on('click', menu.show);
 
-    $menuClose.on('click', function () {
-        $sliderMenu.removeClass(sliderMenuActive);
-        $menuBtn.show();
-        $body.removeClass('blocked');
-    });
+    $menuClose.on('click', menu.hide);
 
-    if (isDestkop) {
-        alignSlider = function () {
-            var $projectTitle = $('.js-project-title'),
-                projectTitleOffsetLeft = $projectTitle.offset().left,
-                activeLeft = $('.slick-current').find('.js-project-slider-item').offset().left,
-                val;
+    alignSlider = function () {
+        var $projectTitle = $('.js-project-title'),
+            projectTitleOffsetLeft = $projectTitle.offset().left,
+            activeLeft = $('.slick-current').find('.js-project-slider-item').offset().left,
+            val;
 
+        if (projectTitleOffsetLeft != activeLeft) {
             val = projectTitleOffsetLeft - activeLeft;
 
             $projectsSlider.animate({
@@ -59,22 +57,27 @@ $(() => {
 
             console.log('align slider ' + val);
         }
-
-        $projectsSlider.on('init', function (event, slick){
-            alignSlider();
-            console.log('slider was initialized');
-        });
-
-        $(window).on('resize', function () {
-            var windowWithNow = $(window).width();
-            if (windowWith != windowWithNow) {
-                clearTimeout(resizeId);
-                resizeId = setTimeout(alignSlider, 1000);
-            }
-
-        });
-
     }
+
+    $projectsSlider.on('init', function (event, slick){
+        alignSlider();
+        console.log('slider was initialized');
+    });
+
+    $(window).on('resize', function () {
+        var windowWithNow = $(window).width();
+        if (windowWith != windowWithNow) {
+            clearTimeout(resizeId);
+            resizeId = setTimeout(alignSlider, 1000);
+        }
+
+        if (isDestkop) {
+            menu.hide();
+        }
+
+
+    });
+
 
     $('.js-slider').slick({
         prevArrow: $('.js-slider-prev'),
