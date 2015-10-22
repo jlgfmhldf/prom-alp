@@ -1,0 +1,74 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+*/
+$pagination-btn-next_x = 39px;
+$pagination-btn-next_y = 0px;
+$pagination-btn-next_offset_x = -39px;
+$pagination-btn-next_offset_y = 0px;
+$pagination-btn-next_width = 22px;
+$pagination-btn-next_height = 40px;
+$pagination-btn-next_total_width = 91px;
+$pagination-btn-next_total_height = 57px;
+$pagination-btn-next_image = '../images/sprite.png';
+$pagination-btn-next = 39px 0px -39px 0px 22px 40px 91px 57px '../images/sprite.png';
+$pagination-btn_x = 69px;
+$pagination-btn_y = 0px;
+$pagination-btn_offset_x = -69px;
+$pagination-btn_offset_y = 0px;
+$pagination-btn_width = 22px;
+$pagination-btn_height = 40px;
+$pagination-btn_total_width = 91px;
+$pagination-btn_total_height = 57px;
+$pagination-btn_image = '../images/sprite.png';
+$pagination-btn = 69px 0px -69px 0px 22px 40px 91px 57px '../images/sprite.png';
+$projects-pagination-btn_x = 0px;
+$projects-pagination-btn_y = 0px;
+$projects-pagination-btn_offset_x = 0px;
+$projects-pagination-btn_offset_y = 0px;
+$projects-pagination-btn_width = 31px;
+$projects-pagination-btn_height = 57px;
+$projects-pagination-btn_total_width = 91px;
+$projects-pagination-btn_total_height = 57px;
+$projects-pagination-btn_image = '../images/sprite.png';
+$projects-pagination-btn = 0px 0px 0px 0px 31px 57px 91px 57px '../images/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
