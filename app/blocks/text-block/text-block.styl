@@ -6,6 +6,7 @@
 
 	+mobile()
 		white-space normal
+		padding-top 50px
 
 	&__col
 		display inline-block
@@ -55,13 +56,19 @@
 						top -55px
 
 
-&_type_news
+	&_type_news
 		padding-bottom 109px
+
+		+mobile()
+			padding-top 31px
+			padding-bottom 0
 
 	&_type_news &
 
 		&__col:first-of-type
-			width 58%
+			width 58
+			padding-right 4%
+
 
 			+mobile()
 				width 100%
