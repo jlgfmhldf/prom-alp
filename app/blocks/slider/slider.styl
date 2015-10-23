@@ -55,6 +55,7 @@
 
 				&__logo
 					position static
+					display block
 
 
 	&__header
@@ -92,7 +93,14 @@
 			left 0
 
 			+mobile()
-				position static
+				position relative
+				top 0
+				width 640px
+
+				+below(680px)
+					width 400px
+
+
 
 		+mobile()
 			bottom 51px
