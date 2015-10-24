@@ -3,7 +3,10 @@ include ../text-block-item/text-block-item
 mixin text-block(data)
     .text-block(class=data.type?'text-block_type_'+data.type:'' id=data.type?data.type:'')
         .wrapper.wrapper_size_small
-            +title(data.title).title_type_uppercase
+            if data.titleLink
+                +title(data.title).title_type_uppercase.text-block__title(href=jv0)
+            else
+                +title(data.title).title_type_uppercase.text-block__title
 
             .text-block__container
 

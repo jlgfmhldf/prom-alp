@@ -1,2 +1,6 @@
 mixin title(data)
-    .title&attributes(attributes)!=data
+    
+    if attributes.href
+        a.title&attributes(attributes)!=data
+    else
+        .title&attributes(attributes)!=data
